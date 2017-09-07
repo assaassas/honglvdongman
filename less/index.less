@@ -1,0 +1,206 @@
+#vessel {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden; // height: 100%;
+}
+
+// ----------------------遮罩层----------------------
+#shade {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 998;
+    display: none;
+}
+
+// ----------------------侧边栏-----------------------
+#sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    border-right: 1px solid #999;
+    top: 0;
+    left: -220px;
+    background: white;
+    z-index: 999;
+    transition: all 1s;
+    .sidebar-content {
+        >img {
+            width: 200px;
+            height: 80px;
+        }
+        >ul {
+            >li {
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                margin-left: 10px;
+                cursor: pointer;
+                >a {
+                    font-size: 14px;
+                    color: #777;
+                    >span {
+                        float: right;
+                        padding-right: 12px;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// --------------------右边内容全部-------------------
+.right-content {
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+}
+
+// ----------------------顶部通栏---------------------
+#topbar {
+    // position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999;
+    .topbar-left {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        .hamburger {
+            float: left;
+            line-height: 40px;
+            color: red;
+            margin-left: 5px;
+            font-size: 16px;
+        }
+        >span {
+            position: relative;
+            margin-left: 50%;
+            left: -60px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .search {
+            float: right;
+            line-height: 40px;
+            color: red;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+    }
+}
+
+// ----------------------轮播图部分-------------------
+#slider {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    .swiper-container {
+        .swiper-wrapper {
+            width: 400%;
+            >li {
+                float: left;
+                width: 100%;
+                height: 130px;
+                >a {
+                    >img {
+                        width: 100%;
+                        height: 130px;
+                    }
+                    >span {
+                        position: absolute;
+                        width: 100%;
+                        height: 23px;
+                        line-height: 23px;
+                        display: block;
+                        color: #ccc;
+                        background-color: rgba(0, 0, 0, .7);
+                        font-size: 12px;
+                        padding-left: 10px;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        .swiper-pagination {
+            text-align: right;
+            >span {
+                background: white;
+            }
+            .circleColor {
+                background-color: #666;
+            }
+        }
+    } 
+}
+
+// ----------------------tab栏部分-------------------
+#tab {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    >ul {
+        >li {
+            width: 25%;
+            height: 30px;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tabColor {
+            color: red;
+            border-bottom: 1px solid red;
+        }
+    }
+}
+
+// -----------------------内容部分--------------------
+#content {
+    width: 100%;
+    >ul {
+        >li {
+            float: left;
+            width: 50%;
+            height: 260px;
+            position: relative;
+            text-align: center;
+            >a {
+                >img {
+                    width: 96%;
+                    height: 210px;
+                }
+                >p {
+                    position: absolute;
+                    width: 96%;
+                    height: 20px;
+                    line-height: 20px;
+                    top: 200px;
+                    left: 2%;
+                    color: #ccc;
+                    background-color: rgba(0, 0, 0, .7);
+                    text-align: center;
+                    font-size: 12px;
+                }
+                >span {
+                    display: block;
+                    margin-top: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #777;
+                }
+            }
+        }
+    }
+}

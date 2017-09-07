@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>专题列表</title>
+     <!-- 引入bootstrap框架的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">  
+    <!-- 引入初始化 css -->
+    <link rel="stylesheet" href="./less/base.css">
+    <!-- 引入zhuanti css  -->
+    <link rel="stylesheet" href="./css/zhuanti.css">
+    
+</head>
+<body>
+    <div id="vessel">
+        <!-- 顶部通栏 -->
+        <header>
+            <a href="index.html"><i class="menu-left glyphicon glyphicon-menu-left"></i></a>
+            <span class="ztTile">专题列表</span>
+        </header>
+        <!-- 内容部分 -->
+        <div id="ztContent">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+    <!-- 移入JQ -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <!-- 引入bootstrap框架的js -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入zhuanti js -->
+    <script src="./js/zhuanti.js"></script>
+    <!-- 引入模板js -->
+    <script src="lib/template-web.js"></script>
+
+    <!-- 模板部分 -->
+     <script id="ztTemplate" type="text/html">
+        {{each}}
+        <li>
+            <a href="{{$value.url}}">
+                <img src="{{$value.img}}" >
+                <span>{{$value.title}}</span>
+            </a>
+        </li>
+        {{/each}}
+    </script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>连载动漫</title>
+     <!-- 引入bootstrap框架的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">  
+    <!-- 引入初始化 css -->
+    <link rel="stylesheet" href="./less/base.css"> 
+    <!-- lianzai css  -->
+    <link rel="stylesheet" href="./css/lianzai.css">
+</head>
+<body>
+    <!-- 总容器 -->
+    <div id="vessel">
+        <!-- 顶部通栏 -->
+        <header>
+            <a href="index.html"><i class="menu-left glyphicon glyphicon-menu-left"></i></a>
+            <span class="lzTile">连载动漫</span>
+        </header>
+        <!-- 内容部分 -->
+        <div id="lzContent">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
+    <!-- 移入JQ -->
+    <script src="lib/jquery/jquery-1.12.4.min.js"></script>
+    <!-- 引入bootstrap框架的js -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入lianzai js -->
+    <script src="./js/lianzai.js"></script>
+    <!-- 引入模板js -->
+    <script src="lib/template-web.js"></script>
+
+    <!-- 模板 -->
+    <script id="lzTemplate" type="text/html">
+        {{each}}
+        <li>
+            <a href="#">
+                <img src="{{$value.img}}" alt="">
+                <p>
+                    <h3>{{$value.name}}</h3>
+                    <span class="contentFont">{{$value.episode}}</span>
+                    <span class="contentFont">{{$value.updateTime}}</span>
+                    <span class="contentFont">下载次数:{{$value.downloadCount}}</span>
+                </p>
+            </a>
+        </li>
+    {{/each}}
+    </script>

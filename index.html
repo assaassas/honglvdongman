@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红旅动漫</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" class="ico">
+    <!-- 引入bootstrap框架的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../dist/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="lib/Swiper-3.4.2/dist/css/swiper.min.css">
+    
+    <!-- 引入初始化 css -->
+    <link rel="stylesheet" href="./less/base.css">
+    <!-- 引入自己的 css -->
+    <link rel="stylesheet" href="./less/index.css">
+</head>
+
+<body>
+    <!-- 主容器 -->
+    <div id="vessel">
+
+        <!-- 遮罩层  -->
+        <div id="shade"></div>
+        <!-- 侧边栏 -->
+        <div id="sidebar">
+            <div class="sidebar-content">
+                <img src="./img/logo.jpg" alt="">
+                <ul>
+                    <li><a href="lianzai.html">连载动漫-get <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="zhuanti.html">专题列表-get<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    <li><a href="#">关于 <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 右边内容全部 -->
+        <div class="right-content">
+            <!-- 顶部通栏 -->
+            <header id="topbar">
+                <div class="topbar-left clearfix">
+                    <a href="#" class="hamburger glyphicon glyphicon-menu-hamburger"></a>
+                    <span>红旅动漫</span>
+                    <a href="#" class="search glyphicon glyphicon-search"></a>
+                </div>
+            </header>
+
+            <!-- 轮播图部分 -->
+            <div id="slider">
+                <div class="swiper-container">
+                    <!-- 图片部分 -->
+                     <ul class="swiper-wrapper clearfix">
+
+                    </ul>
+                     <!-- 小圆点 -->
+                    <div class="swiper-pagination"></div>
+                    </div>
+
+            </div>
+
+            <!-- tab栏部分 -->
+            <div id="tab">
+                <ul>
+                    <li class="tab-1 tabColor">新增连载</li>
+                    <li class="tab-2">新增完结</li>
+                    <li class="tab-3">推荐游戏</li>
+                    <li class="tab-4">推荐完结</li>
+                </ul>
+            </div>
+
+            <!-- 内容部分 -->
+            <div id="content">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<!-- 移入JQ -->
+<script src="lib/jquery/jquery-1.12.4.min.js"></script>
+<!-- 引入自己的js -->
+<script src="js/index.js"></script>
+<!-- 引入bootstrap框架的js -->
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<!-- 引入swiper框架 js -->
+<script src="lib/Swiper-3.4.2/dist/js/swiper.min.js"></script>
+<!-- 引入模板js -->
+<script src="lib/template-web.js"></script>
+
+<!-- 模板区域 -->
+
+<!-- 轮播图部分 -->
+<script id="sliderTemplate" type="text/html">
+    {{each}}
+    <li class="swiper-slide">
+        <a href="{{$value.url}}">
+            <img src="{{$value.img}}" alt="">
+            <span>{{$value.title}}</span>   
+        </a>
+    </li>
+    {{/each]}}
+</script>
+
+<!-- 内容部分 -->
+<!-- 1.新增连载部分 -->
+<script id="xzTemplate" type="text/html">
+    {{each}}
+    <li>
+        <a href="{{$value.url}}">
+            <img src="{{$value.img}}" alt="">
+            <p>{{$value.update}}</p>
+            <span>{{$value.name}}</span>
+        </a>
+    </li>
+    {{/each]}}
+</script>
